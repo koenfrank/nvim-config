@@ -3,6 +3,7 @@ return {
     "mfussenegger/nvim-dap",
     optional = true,
     opts = function()
+      print(vim.fn.exepath("netcoredbg"))
       local dap = require("dap")
       if not dap.adapters["netcoredbg"] then
         require("dap").adapters["netcoredbg"] = {
